@@ -1,7 +1,9 @@
-/* Academy theme — ChimeraNext D&D edition.
- * Headings: Alegreya (serif, epic/fantasy voice). Body <p>: Alegreya Sans.
- * Light surfaces = parchment (Skyrim UI); dark surfaces = ink-navy iron (BG3 panels).
- * Accent CTAs = antique gold (logo); danger/bosses = blood; magic/certs = arcane.
+/* Academy theme — dark-first D&D edition.
+ * DEFAULT = dark (dungeon-night). Light parchment mode opt-in via .light.
+ * Headings: Alegreya. Body <p>: Alegreya Sans. Code: Inconsolata.
+ * Core (logo-exact): ink #142A46, gold #B78E3B, parchment, iron, blood, arcane.
+ * Extended (legacy neon, repurposed): arcane violet #7C5CFF = magic/links,
+ *   frost blue #3B82F6 = info, mana cyan #22D3EE = highlights, charm #EC4899 = rare.
  */
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alegreya+Sans:ital,wght@0,300..900;1,300..900&family=Inconsolata:wght@400..700&display=swap');
 
@@ -26,46 +28,59 @@
   --color-gold-600: #a67e34;
   --color-gold-700: #7a5f1e;
 
-  /* Parchment — light surfaces, quest-scroll backgrounds. */
+  /* Parchment — light mode surfaces + dark mode text. */
   --color-parchment-50: #faf6ec;
   --color-parchment-100: #f2ead8;
   --color-parchment-200: #e7d9b8;
   --color-parchment-300: #d6c096;
 
-  /* Iron — dark dashboard panels, borders. */
+  /* Iron — muted text + dark panel fills. */
   --color-iron-300: #9aa3b2;
   --color-iron-500: #4a5568;
   --color-iron-700: #2b2f36;
   --color-iron-900: #1e222b;
 
-  /* Blood — destructive actions, boss-level alerts (BG3 red). */
+  /* Blood — destructive. -400 is the dark-mode-legible step. */
+  --color-blood-400: #fb7185;
   --color-blood-500: #a33b3b;
   --color-blood-600: #8e2a2a;
   --color-blood-700: #7a2323;
 
-  /* Arcane — certificates, magic/progress highlights (Skyrim enchant). */
-  --color-arcane-400: #7c6bb0;
-  --color-arcane-500: #5b4b8a;
-  --color-arcane-700: #3d3460;
+  /* Arcane — magic/links/certs. Anchored on legacy violet #7C5CFF. */
+  --color-arcane-300: #bbabff;
+  --color-arcane-500: #7c5cff;
+  --color-arcane-700: #5036a6;
+
+  /* Extended legacy accents (dark-mode homeostasis with website). */
+  --color-frost-300: #9dc1fb;
+  --color-frost-500: #3b82f6;
+  --color-mana-500: #22d3ee;
+  --color-charm-500: #ec4899;
+
+  /* Status — kept from legacy for dark legibility. */
+  --color-status-success: #34d399;
+  --color-status-warning: #fbbf24;
 }
 
-body {
+/* DARK DEFAULT */
+:root, body {
   font-family: var(--font-sans);
-  background: var(--color-parchment-50);
-  color: var(--color-ink-900);
-}
-
-h1, h2, h3, .font-display {
-  font-family: var(--font-display);
-}
-
-.dark {
   background: var(--color-ink-950);
   color: var(--color-parchment-100);
 }
-.dark h1, .dark h2, .dark h3 {
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
   color: var(--color-parchment-50);
 }
+a { color: var(--color-arcane-300); }
+
+/* LIGHT MODE (opt-in, quest-scroll) */
+.light {
+  background: var(--color-parchment-50);
+  color: var(--color-ink-900);
+}
+.light h1, .light h2, .light h3 { color: var(--color-ink-900); }
+.light a { color: var(--color-arcane-700); }
 
 /* Code examples — Inconsolata everywhere code appears. */
 code, kbd, samp, pre {
@@ -79,9 +94,16 @@ pre {
   padding: 14px 16px;
   overflow-x: auto;
 }
+.light pre {
+  background: var(--color-ink-900);
+}
 code:not(pre code) {
-  background: var(--color-parchment-200);
-  color: var(--color-ink-900);
+  background: var(--color-ink-800);
+  color: var(--color-gold-300);
   border-radius: 6px;
   padding: 1px 6px;
+}
+.light code:not(pre code) {
+  background: var(--color-parchment-200);
+  color: var(--color-ink-900);
 }

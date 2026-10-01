@@ -16,6 +16,7 @@ export const academyConfig = {
   },
   video: { cdn: process.env.NUXT_PUBLIC_VIDEO_CDN ?? '', mock: false },
   demo: false,
+  darkDefault: true,
   site: 'https://academy.chimeranext.dev',
   issuer: 'did:web:academy.chimeranext.dev',
 }
