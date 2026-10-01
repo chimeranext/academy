@@ -1,0 +1,67 @@
+/* Academy theme — ChimeraNext D&D edition.
+ * Headings: Alegreya (serif, epic/fantasy voice). Body <p>: Alegreya Sans.
+ * Light surfaces = parchment (Skyrim UI); dark surfaces = ink-navy iron (BG3 panels).
+ * Accent CTAs = antique gold (logo); danger/bosses = blood; magic/certs = arcane.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alegreya+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+@theme {
+  --font-display: 'Alegreya', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Alegreya Sans', system-ui, -apple-system, sans-serif;
+
+  /* Ink navy — sampled from ChimeraNext logo wordmark (~#16233F). */
+  --color-ink-50: #f0f4fa;
+  --color-ink-100: #dce4f2;
+  --color-ink-700: #2a4570;
+  --color-ink-800: #1f3355;
+  --color-ink-900: #16233f;
+  --color-ink-950: #0b1526;
+
+  /* Antique gold — sampled from logo griffin (~#C9A227). */
+  --color-gold-100: #f7edcb;
+  --color-gold-300: #e3c766;
+  --color-gold-400: #d4af37;
+  --color-gold-500: #c9a227;
+  --color-gold-600: #8c6d1f;
+  --color-gold-700: #7a5f1e;
+
+  /* Parchment — light surfaces, quest-scroll backgrounds. */
+  --color-parchment-50: #faf6ec;
+  --color-parchment-100: #f2ead8;
+  --color-parchment-200: #e7d9b8;
+  --color-parchment-300: #d6c096;
+
+  /* Iron — dark dashboard panels, borders. */
+  --color-iron-300: #9aa3b2;
+  --color-iron-500: #4a5568;
+  --color-iron-700: #2b2f36;
+  --color-iron-900: #1e222b;
+
+  /* Blood — destructive actions, boss-level alerts (BG3 red). */
+  --color-blood-500: #a33b3b;
+  --color-blood-600: #8e2a2a;
+  --color-blood-700: #7a2323;
+
+  /* Arcane — certificates, magic/progress highlights (Skyrim enchant). */
+  --color-arcane-400: #7c6bb0;
+  --color-arcane-500: #5b4b8a;
+  --color-arcane-700: #3d3460;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-parchment-50);
+  color: var(--color-ink-900);
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+.dark {
+  background: var(--color-ink-950);
+  color: var(--color-parchment-100);
+}
+.dark h1, .dark h2, .dark h3 {
+  color: var(--color-parchment-50);
+}
