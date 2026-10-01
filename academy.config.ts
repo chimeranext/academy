@@ -10,6 +10,7 @@ export const academyConfig = {
     ink: '#142A46',
     fonts: {
       display: 'Alegreya, Georgia, serif',
+      epic: "'Piazzolla', Georgia, serif",
       body: "'Alegreya Sans', system-ui, sans-serif",
       mono: "'Inconsolata', ui-monospace, monospace",
     },
