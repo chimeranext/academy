@@ -12,7 +12,8 @@
     "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
-    "@chimeranext/nuxtui-lms-template": "workspace:*",
+    "@chimeranext/nuxtui-lms-template": "file:../nuxtui-lms-template",
+    "@chimeranext/tokens": "file:../design-system/packages/tokens",
     "nuxt": "^4.0.0"
   }
 }

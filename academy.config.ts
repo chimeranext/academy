@@ -1,4 +1,6 @@
 // Academy override layer. NEVER copy template code here — override only.
+// Brand color values are SSOT from @chimeranext/tokens (design-system tokens.json).
+import tokens from '@chimeranext/tokens'
 import { templateConfig } from '../nuxtui-lms-template/template.config'
 
 export const academyConfig = {
@@ -6,8 +8,8 @@ export const academyConfig = {
   brand: {
     name: 'ChimeraNext Academy',
     logo: '/chimeranext.svg',
-    primary: '#B78E3B',
-    ink: '#142A46',
+    primary: tokens.brand.primary,
+    ink: tokens.brand.secondary,
     fonts: {
       display: 'Alegreya, Georgia, serif',
       epic: "'Piazzolla', Georgia, serif",
