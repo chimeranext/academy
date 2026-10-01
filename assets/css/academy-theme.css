@@ -3,26 +3,27 @@
  * Light surfaces = parchment (Skyrim UI); dark surfaces = ink-navy iron (BG3 panels).
  * Accent CTAs = antique gold (logo); danger/bosses = blood; magic/certs = arcane.
  */
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alegreya+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alegreya+Sans:ital,wght@0,300..900;1,300..900&family=Inconsolata:wght@400..700&display=swap');
 
 @theme {
   --font-display: 'Alegreya', Georgia, 'Times New Roman', serif;
   --font-sans: 'Alegreya Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Inconsolata', ui-monospace, 'JetBrains Mono', monospace;
 
-  /* Ink navy — sampled from ChimeraNext logo wordmark (~#16233F). */
+  /* Ink navy — exact from canonical chimeranext.svg (#142A46). */
   --color-ink-50: #f0f4fa;
   --color-ink-100: #dce4f2;
   --color-ink-700: #2a4570;
   --color-ink-800: #1f3355;
-  --color-ink-900: #16233f;
+  --color-ink-900: #142a46;
   --color-ink-950: #0b1526;
 
-  /* Antique gold — sampled from logo griffin (~#C9A227). */
+  /* Antique gold — exact from canonical chimeranext.svg. */
   --color-gold-100: #f7edcb;
-  --color-gold-300: #e3c766;
-  --color-gold-400: #d4af37;
-  --color-gold-500: #c9a227;
-  --color-gold-600: #8c6d1f;
+  --color-gold-300: #d9b45b;
+  --color-gold-400: #ba913d;
+  --color-gold-500: #b78e3b;
+  --color-gold-600: #a67e34;
   --color-gold-700: #7a5f1e;
 
   /* Parchment — light surfaces, quest-scroll backgrounds. */
@@ -64,4 +65,23 @@ h1, h2, h3, .font-display {
 }
 .dark h1, .dark h2, .dark h3 {
   color: var(--color-parchment-50);
+}
+
+/* Code examples — Inconsolata everywhere code appears. */
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
+}
+pre {
+  background: var(--color-ink-950);
+  color: var(--color-parchment-100);
+  border: 1px solid var(--color-gold-600);
+  border-radius: 10px;
+  padding: 14px 16px;
+  overflow-x: auto;
+}
+code:not(pre code) {
+  background: var(--color-parchment-200);
+  color: var(--color-ink-900);
+  border-radius: 6px;
+  padding: 1px 6px;
 }

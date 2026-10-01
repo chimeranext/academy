@@ -5,10 +5,14 @@ export const academyConfig = {
   ...templateConfig,
   brand: {
     name: 'ChimeraNext Academy',
-    logo: '/chimera-logo.svg',
-    primary: '#C9A227',
-    ink: '#16233F',
-    fonts: { display: 'Alegreya, Georgia, serif', body: "'Alegreya Sans', system-ui, sans-serif" },
+    logo: '/chimeranext.svg',
+    primary: '#B78E3B',
+    ink: '#142A46',
+    fonts: {
+      display: 'Alegreya, Georgia, serif',
+      body: "'Alegreya Sans', system-ui, sans-serif",
+      mono: "'Inconsolata', ui-monospace, monospace",
+    },
   },
   video: { cdn: process.env.NUXT_PUBLIC_VIDEO_CDN ?? '', mock: false },
   demo: false,
