@@ -12,3 +12,11 @@ Parent change: `../nuxtui-lms-template/openspec/changes/add-generative-landing-m
   `credentials_issued`.
 - Fonts inside canvas labels: Piazzolla (room names), Inconsolata (stats).
 - Same perf contract; GPU sections excluded from crawler prerender via routeRules.
+
+## Apply status (template change `add-generative-landing-motion`)
+Template implements: `lib/generative/{dungeon,pcb,adapters}.ts`,
+`app/components/motion/{DungeonCanvas,PcbCanvas,GriffinMascot}.vue`,
+`app/composables/useScrollTheater.ts`, landing wiring in `app/pages/index.vue`.
+Data binding (rooms←courses/enrollments, chips←services, mascot enrolled/certified
+states) activates when academy wires the template as a Nuxt layer — until then
+academy renders template demo data (follow-up, needs layer wiring + prod Neon).
