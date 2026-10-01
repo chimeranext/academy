@@ -80,6 +80,9 @@ h3, h4, .font-display {
   color: var(--color-parchment-50);
 }
 a { color: var(--color-arcane-300); }
+button, input, select, textarea, .btn {
+  font-family: var(--font-sans);
+}
 
 /* LIGHT MODE (opt-in, quest-scroll) */
 .light {
