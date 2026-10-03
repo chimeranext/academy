@@ -1,0 +1,19 @@
+{
+  "name": "@chimeranext/academy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ChimeraNext Academy — thin wrapper over nuxtui-lms-template (tokens Chimera, real content, prod keys).",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "db:migrate": "drizzle-kit migrate"
+  },
+  "dependencies": {
+    "@chimeranext/nuxtui-lms-template": "file:../nuxtui-lms-template",
+    "@chimeranext/tokens": "file:../design-system/packages/tokens",
+    "nuxt": "^4.0.0"
+  }
+}

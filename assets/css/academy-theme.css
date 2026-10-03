@@ -1,0 +1,149 @@
+/* Academy theme — dark-first D&D edition. SSOT: @chimeranext/tokens.
+ * DEFAULT = dark (dungeon-night). Light parchment mode opt-in via .light
+ * (the tokens build flips the semantic vars; static brand-anchored scales hold).
+ *
+ * SSOT wiring: `@chimeranext/tokens` (file:../design-system/packages/tokens)
+ * exposes "./css" -> build/css/variables.css, imported below. It provides
+ * --brand-* (primary gold, secondary ink, tertiary arcane, accent charm,
+ * parchment, goldDeep, goldLight, blood, frost, mana — hex, usable directly),
+ * theme-aware semantic triplets (dark on :root, light overrides under .light;
+ * HSL channels for the repo-wide `hsl(var(--x))` contract — always wrapped),
+ * --font-display / epic / body / mono (bare family names), and --radius-*. Every color below is a
+ * var() into those tokens; intermediate scale steps with no 1:1 token are
+ * color-mix() derivations from brand anchors. No literal colors in this file.
+ *
+ * Documented exceptions (none involves a hardcoded color):
+ * - @theme --font-* stacks repeat the family names as literals because the
+ *   token vars carry those SAME names; a var() self-reference is
+ *   guaranteed-invalid CSS. The names stay single-sourced in tokens.json
+ *   font.*; element rules below consume var(--font-*) at runtime with
+ *   fallback stacks appended.
+ * - --gradient-brand is NOT consumed: no academy surface uses a gradient.
+ *   (An earlier tokens build emitted it as `undefined`; fixed upstream.)
+ *
+ * Type scale (unchanged): Alegreya 800 H1, Piazzolla 600 H2,
+ * Piazzolla 400 uppercase H3/H4, Alegreya Sans body (incl. buttons/inputs),
+ * Inconsolata code. Dark-first.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alegreya+Sans:ital,wght@0,300..900;1,300..900&family=Inconsolata:wght@400..700&family=Piazzolla:ital,opsz,wght@0,8..30,100..900;1,8..30,100..900&display=swap');
+@import '@chimeranext/tokens/css';
+
+@theme {
+  /* Stacks mirror tokens font.* (literals required — see header). */
+  --font-display: 'Alegreya', Georgia, 'Times New Roman', serif;
+  --font-epic: 'Piazzolla', Georgia, serif;
+  --font-sans: 'Alegreya Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Inconsolata', ui-monospace, 'JetBrains Mono', monospace;
+
+  /* Ink navy — anchored on --brand-secondary (tokens brand.secondary). */
+  --color-ink-50: color-mix(in srgb, var(--brand-secondary) 6%, white);
+  --color-ink-100: color-mix(in srgb, var(--brand-secondary) 13%, white);
+  --color-ink-700: color-mix(in srgb, var(--brand-secondary) 65%, var(--brand-frost));
+  --color-ink-800: color-mix(in srgb, var(--brand-secondary) 80%, var(--brand-frost));
+  --color-ink-900: var(--brand-secondary);
+  --color-ink-950: color-mix(in srgb, var(--brand-secondary) 55%, black);
+
+  /* Antique gold — anchored on --brand-primary / goldLight / goldDeep. */
+  --color-gold-100: color-mix(in srgb, var(--brand-primary) 16%, white);
+  --color-gold-300: var(--brand-goldLight);
+  --color-gold-400: color-mix(in srgb, var(--brand-primary) 60%, var(--brand-goldDeep));
+  --color-gold-500: var(--brand-primary);
+  --color-gold-600: var(--brand-goldDeep);
+  --color-gold-700: color-mix(in srgb, var(--brand-goldDeep) 65%, black);
+
+  /* Parchment — anchored on --brand-parchment. */
+  --color-parchment-50: color-mix(in srgb, var(--brand-parchment) 45%, white);
+  --color-parchment-100: var(--brand-parchment);
+  --color-parchment-200: color-mix(in srgb, var(--brand-parchment) 70%, var(--brand-goldLight));
+  --color-parchment-300: color-mix(in srgb, var(--brand-parchment) 55%, var(--brand-goldDeep));
+
+  /* Iron — cool grays keyed to ink (tokens carry no neutral ramp). */
+  --color-iron-300: color-mix(in srgb, var(--brand-secondary) 45%, white);
+  --color-iron-500: color-mix(in srgb, var(--brand-secondary) 45%, gray);
+  --color-iron-700: color-mix(in srgb, var(--brand-secondary) 30%, gray 20%, black 50%);
+  --color-iron-900: color-mix(in srgb, var(--brand-secondary) 32%, gray 18%, black 50%);
+
+  /* Blood — anchored on --brand-blood; -400 stays the dark-legible step. */
+  --color-blood-400: color-mix(in srgb, var(--brand-blood) 45%, var(--brand-accent) 20%, white 35%);
+  --color-blood-500: var(--brand-blood);
+  --color-blood-600: color-mix(in srgb, var(--brand-blood) 85%, black);
+  --color-blood-700: color-mix(in srgb, var(--brand-blood) 70%, black);
+
+  /* Arcane — anchored on --brand-tertiary. */
+  --color-arcane-300: color-mix(in srgb, var(--brand-tertiary) 45%, white);
+  --color-arcane-500: var(--brand-tertiary);
+  --color-arcane-700: color-mix(in srgb, var(--brand-tertiary) 65%, black);
+
+  /* Frost / mana / charm — direct brand anchors. */
+  --color-frost-300: color-mix(in srgb, var(--brand-frost) 55%, white);
+  --color-frost-500: var(--brand-frost);
+  --color-mana-500: var(--brand-mana);
+  --color-charm-500: var(--brand-accent);
+
+  /* Status — theme-aware semantic triplets (dark values match legacy). */
+  --color-status-success: hsl(var(--success));
+  --color-status-warning: hsl(var(--warning));
+}
+
+/* DARK DEFAULT — semantic triplets resolve to the tokens dark theme on :root. */
+:root, body {
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+h1, .font-display {
+  font-family: var(--font-display), Georgia, 'Times New Roman', serif;
+  font-weight: 800;
+  color: hsl(var(--foreground));
+}
+h2, .font-epic {
+  font-family: var(--font-epic), Georgia, serif;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+h3, h4 {
+  font-family: var(--font-epic), Georgia, serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand-goldLight);
+}
+a { color: var(--color-arcane-300); }
+button, input, select, textarea, .btn {
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+}
+
+/* LIGHT MODE (opt-in, quest-scroll) — static scales hold, semantics flip. */
+.light {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+.light h1 { color: hsl(var(--foreground)); }
+.light h2 { color: hsl(var(--foreground)); }
+.light h3, .light h4 { color: var(--color-gold-700); }
+.light a { color: var(--color-arcane-700); }
+
+.font-epic {
+  font-family: var(--font-epic), Georgia, serif;
+}
+code, kbd, samp, pre {
+  font-family: var(--font-mono), ui-monospace, 'JetBrains Mono', monospace;
+}
+pre {
+  background: var(--color-ink-950);
+  color: var(--brand-parchment);
+  border: 1px solid var(--brand-goldDeep);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  overflow-x: auto;
+}
+code:not(pre code) {
+  background: var(--color-ink-800);
+  color: var(--brand-goldLight);
+  border-radius: var(--radius-sm);
+  padding: 1px 6px;
+}
+.light code:not(pre code) {
+  background: var(--color-parchment-200);
+  color: var(--brand-secondary);
+}

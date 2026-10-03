@@ -1,0 +1,13 @@
+# OpsX override side — deltas only. Source of truth: ../nuxtui-lms-template.
+schema: spec-driven
+remotes:
+  - name: template
+    path: ../nuxtui-lms-template
+    role: source
+  - name: academy
+    path: .
+    role: override
+    specsDir: specs/overrides
+sync:
+  direction: template-to-academy
+  strategy: deltas-only
