@@ -1,0 +1,549 @@
+# docs/vertivo/sitemap.yaml — Mapa del contenido de la Biblioteca de Guías de Auto-Estudio
+# Fuente: Notion DB 1f6886fa-7fe4-432d-86f3-0305705188e0
+#        → data source collection://81dc2be4-1e3c-4fe7-8d06-07375a0ee9a9
+# Extraído: 2026-10-20 vía Notion MCP (mcp.notion.com/mcp), recursivo (hub + subpáginas)
+# Contrato: el wrapper (notion-recursive-fetch) vuelve a volcar cada hub+subpáginas
+# en local_path. Los resources NO se resuelven aquí — solo se inventarían.
+# Si local_path no existe al correr el wrapper → falla explícita (nunca silencioso).
+version: 1
+source:
+  notion_database: https://app.notion.com/p/vertivolatam/1f6886fa7fe4432d86f30305705188e0
+  data_source: collection://81dc2be4-1e3c-4fe7-8d06-07375a0ee9a9
+  guides_count: 38
+  extracted_at: "2026-10-20T00:00:00Z"
+  extraction_mode: recursive
+
+guides:
+  - id: "01"
+    skill: "(sin título — revisar si es borrador o fila vacía)"
+    type: null
+    notion_url: https://app.notion.com/p/531d25f98b724ff99b2db6e133144ba8
+    local_path: docs/vertivo/sin-titulo/
+    children: []
+    resources: []
+
+  - id: "02"
+    skill: "Agronomía & Horticultura en Ambientes Controlados"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/63e87dd4b0c54702b16a57229d7d5639
+    local_path: docs/vertivo/agronomia-horticultura/
+    children:
+      - { kind: notion_page, title: "Buscador de fabricantes de Luces de Horticultura", notion_url: https://app.notion.com/p/263f991855c24305b84ac53c079ce15b, local_path: docs/vertivo/agronomia-horticultura/buscador-fabricantes-luces.md }
+      - { kind: notion_page, title: "Planes de Estudios de Ingeniería en Agronomía", notion_url: https://app.notion.com/p/cfbd11f637d9469d84635f097a85540c, local_path: docs/vertivo/agronomia-horticultura/planes-estudios-agronomia.md }
+      - { kind: notion_page, title: "Playlists Aeroponía", notion_url: https://app.notion.com/p/26fbec9795f643c9a40c77db51960ff9, local_path: docs/vertivo/agronomia-horticultura/playlists-aeroponia.md }
+    resources:
+      - { kind: article, url: "https://regenerativefoodandfarming.co.uk/2021/03/12/vertical-farming/" }
+
+  - id: "03"
+    skill: "Autoaprendizaje Digital"
+    type: Blanda Personal
+    notion_url: https://app.notion.com/p/cb970d943d2444dc99fe0402455bedac
+    local_path: docs/vertivo/autoaprendizaje-digital/
+    children:
+      - { kind: notion_page, title: "Cómo Obtener Inglés C1 en C.R.", notion_url: https://app.notion.com/p/1b2d5f19cd504216a18a8bb3919d568e, local_path: docs/vertivo/autoaprendizaje-digital/como-obtener-ingles-c1.md }
+      - { kind: notion_page, title: "Emprendedurismo (mención)", notion_url: https://app.notion.com/p/f7cce625203b44babd99aa60a1604801, local_path: null }
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=jD12EKtDJTU" }
+      - { kind: article, url: "https://esikigai.com/las-4-fases-esenciales-del-aprendizaje/" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=99eMk1P0pz4" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=ZTU9FaLFYzo" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=he57-FpcGYE" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=qYfJg69St_E" }
+
+  - id: "04"
+    skill: "Automatización de Marketing"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/9d39a0feb6fe4035a508d99cdd7a3dfe
+    local_path: docs/vertivo/automatizacion-marketing/
+    children:
+      - { kind: notion_page, title: "Certificaciones Internacionales", notion_url: https://app.notion.com/p/7a37e8da1a014e15824a7d539242b4a7, local_path: docs/vertivo/automatizacion-marketing/certificaciones-internacionales.md }
+      - { kind: notion_page, title: "SEO, SEM y Retargeting", notion_url: https://app.notion.com/p/4556d9933993401c84253a8c50f9fb1d, local_path: docs/vertivo/automatizacion-marketing/seo-sem-retargeting.md }
+      - { kind: notion_page, title: "Programación de Contenidos RRSS", notion_url: https://app.notion.com/p/2ee387d4bc2b42ecacd137f8b66848a0, local_path: docs/vertivo/automatizacion-marketing/programacion-contenidos-rrss.md }
+      - { kind: notion_page, title: "Flywheel de Amazon", notion_url: https://app.notion.com/p/0da23e8a128e403093187d01a35d3be1, local_path: docs/vertivo/automatizacion-marketing/flywheel-amazon.md }
+      - { kind: notion_page, title: "¿Qué vuelve viral un contenido?", notion_url: https://app.notion.com/p/85713f03763b43a9bc3702eb3eda493a, local_path: docs/vertivo/automatizacion-marketing/que-vuelve-viral-contenido.md }
+      - { kind: notion_page, title: "Instructores de Otros Cursos", notion_url: https://app.notion.com/p/9157b5224f984c959c46f75ccca2ab33, local_path: docs/vertivo/automatizacion-marketing/instructores-otros-cursos.md }
+      - { kind: notion_page, title: "Reactivación Leads por WhatsApp", notion_url: https://app.notion.com/p/5027a3fc18d7468eb7210780a526eabf, local_path: docs/vertivo/automatizacion-marketing/reactivacion-leads-whatsapp.md }
+      - { kind: notion_page, title: "Recomendaciones de CRMs", notion_url: https://app.notion.com/p/85186c919f5d4320b4f39a434ecd5814, local_path: docs/vertivo/automatizacion-marketing/recomendaciones-crms.md }
+      - { kind: notion_page, title: "Herramientas de Prospección B2B", notion_url: https://app.notion.com/p/4c52453b7c8a4468838283b07f432b3d, local_path: docs/vertivo/automatizacion-marketing/herramientas-prospeccion-b2b.md }
+      - { kind: notion_page, title: "Dashboards para Análisis de Datos", notion_url: https://app.notion.com/p/d98d20b0b6f44aba83dcd00bfbd1ae24, local_path: docs/vertivo/automatizacion-marketing/dashboards-analisis-datos.md }
+      - { kind: notion_page, title: "Bots de Automatización", notion_url: https://app.notion.com/p/2d2ade5e43fe4900b8e0b1c8d585ad5e, local_path: docs/vertivo/automatizacion-marketing/bots-automatizacion.md }
+      - { kind: notion_page, title: "Detección de Intención del Usuario", notion_url: https://app.notion.com/p/30cdf517a9194b67af345110bd55e313, local_path: docs/vertivo/automatizacion-marketing/deteccion-intencion-usuario.md }
+    resources: []
+
+  - id: "05"
+    skill: "Automatización de Procesos de Negocio"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/35fbf6ef1ee348feb9b3ba7d7b8f1b22
+    local_path: docs/vertivo/automatizacion-procesos/
+    children: []
+    resources:
+      - { kind: article, url: "https://asana.com/es/resources/project-post-mortem-tips" }
+
+  - id: "06"
+    skill: "Branding Corporativo"
+    type: Blanda Corporativa
+    notion_url: https://app.notion.com/p/dd3fdca7cff142ed90966f4b6e507479
+    local_path: docs/vertivo/branding-corporativo/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=U_nzqnXWvSo" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=wnyI7ZM_Mrk" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=kxMgYEY-ri0" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=CLntSaAzhiQ" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=qYfJg69St_E" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=S5pfH-PhpNY" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=N6E5RaI3Am4" }
+
+  - id: "07"
+    skill: "Contabilidad para Startups"
+    type: Dura en Finanzas
+    notion_url: https://app.notion.com/p/4bace4e4854c42d6a11e85e641b44747
+    local_path: docs/vertivo/contabilidad-startups/
+    children:
+      - { kind: notion_page, title: "Métodos Contables", notion_url: https://app.notion.com/p/30cb874f7d3e4c9ab09bfc7c3aac964c, local_path: docs/vertivo/contabilidad-startups/metodos-contables.md }
+      - { kind: notion_page, title: "Normas NIIF para PyMEs", notion_url: https://app.notion.com/p/cfd2779d52724dca84fe8a99dbd604d4, local_path: docs/vertivo/contabilidad-startups/normas-niif-pymes.md }
+      - { kind: notion_page, title: "Ingeniería de Costos", notion_url: https://app.notion.com/p/6c5d21f2b2c24f958e2cb7e4cd9e4190, local_path: docs/vertivo/contabilidad-startups/ingenieria-costos.md }
+      - { kind: notion_page, title: "Valoración de Empresas", notion_url: https://app.notion.com/p/118a395b19154209a51e1196c66d86c8, local_path: docs/vertivo/contabilidad-startups/valoracion-empresas.md }
+      - { kind: notion_page, title: "Inversión según el Valor", notion_url: https://app.notion.com/p/3387a3e37c2046ac8e6f64f41f9a864e, local_path: docs/vertivo/contabilidad-startups/inversion-segun-valor.md }
+      - { kind: notion_page, title: "Análisis Marginal", notion_url: https://app.notion.com/p/bf3c19ac2eb4429ea88b8b18825d44ca, local_path: docs/vertivo/contabilidad-startups/analisis-marginal.md }
+      - { kind: notion_page, title: "Modelaje Financiero", notion_url: https://app.notion.com/p/7db33c8d42c4407087031a5411a0a6c1, local_path: docs/vertivo/contabilidad-startups/modelaje-financiero.md }
+      - { kind: notion_page, title: "QuickBooks Online Internacional", notion_url: https://app.notion.com/p/ad5abc18812a4e69be0882882cec8820, local_path: docs/vertivo/contabilidad-startups/quickbooks-online-internacional.md }
+      - { kind: notion_page, title: "¿Cómo escalar una startup dedicada a productos físicos?", notion_url: https://app.notion.com/p/a8fab61e1efb4d15896e829a19bd67b5, local_path: docs/vertivo/contabilidad-startups/como-escalar-startup-productos-fisicos.md }
+    resources: []
+
+  - id: "08"
+    skill: "Copywriting Manual & Automatizado"
+    type: Blanda Corporativa
+    notion_url: https://app.notion.com/p/67e95985483c4172b1d4680ae1b3de09
+    local_path: docs/vertivo/copywriting/
+    children: []
+    resources: []
+
+  - id: "09"
+    skill: "Crecimiento Personal"
+    type: Blanda Personal
+    notion_url: https://app.notion.com/p/d864ff5f161f4557bc335c215a93ffab
+    local_path: docs/vertivo/crecimiento-personal/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=U_nzqnXWvSo" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=wnyI7ZM_Mrk" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=kxMgYEY-ri0" }
+
+  - id: "10"
+    skill: "CriptoActivos"
+    type: Dura en Finanzas
+    notion_url: https://app.notion.com/p/98c44be69dd049e480cf33b7f2ef4041
+    local_path: docs/vertivo/criptoactivos/
+    children:
+      - { kind: notion_page, title: "Desarrollo de Software para Blockchain (mención)", notion_url: https://app.notion.com/p/d2845890a184473da8bcd0386132fd99, local_path: null }
+    resources: []
+
+  - id: "11"
+    skill: "Desarrollo de Aplicaciones Multiplataforma"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/4433a755b2e5493585241f9c80a9471a
+    local_path: docs/vertivo/desarrollo-apps-multiplataforma/
+    children:
+      - { kind: notion_page, title: "Pasos típicos en el proceso de lanzamiento de una aplicación móvil", notion_url: https://app.notion.com/p/b87caf48aff3457896f6e753e82c6346, local_path: docs/vertivo/desarrollo-apps-multiplataforma/pasos-lanzamiento-app-movil.md }
+      - { kind: notion_page, title: "React Native", notion_url: https://app.notion.com/p/0d3b003df8ac43788510fd766d32238e, local_path: docs/vertivo/desarrollo-apps-multiplataforma/react-native.md }
+      - { kind: notion_page, title: "Flutter, Dart & FlutterFlow", notion_url: https://app.notion.com/p/6701a924b2e948bbb8743ffb1175765b, local_path: docs/vertivo/desarrollo-apps-multiplataforma/flutter-dart-flutterflow.md }
+      - { kind: notion_page, title: ".NET MAUI con Visual Studio 2022", notion_url: https://app.notion.com/p/7209766f46de48db81c306cd4fb9704e, local_path: docs/vertivo/desarrollo-apps-multiplataforma/dotnet-maui-vs2022.md }
+      - { kind: notion_page, title: "Firebase Test Lab", notion_url: https://app.notion.com/p/28d50e16ac2f80c28c30d19eb26ebdff, local_path: docs/vertivo/desarrollo-apps-multiplataforma/firebase-test-lab.md }
+      - { kind: notion_page, title: "CodeMagic (DevOps para Flutter)", notion_url: https://app.notion.com/p/1d29b0771bec4c27ae695406eb9a0688, local_path: docs/vertivo/desarrollo-apps-multiplataforma/codemagic-devops-flutter.md }
+      - { kind: notion_page, title: "AWS Amplify para Flutter", notion_url: https://app.notion.com/p/22fb899958aa43cd8b441de007f4669a, local_path: docs/vertivo/desarrollo-apps-multiplataforma/aws-amplify-flutter.md }
+      - { kind: notion_page, title: "Adalo", notion_url: https://app.notion.com/p/f054de5b457c43c79a1e051669799bd2, local_path: docs/vertivo/desarrollo-apps-multiplataforma/adalo.md }
+      - { kind: notion_page, title: "FlutterFlow", notion_url: https://app.notion.com/p/9b82d671c3a64e53996dc1bca85951cf, local_path: docs/vertivo/desarrollo-apps-multiplataforma/flutterflow.md }
+    resources: []
+
+  - id: "12"
+    skill: "Desarrollo de Software para Blockchain"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/d2845890a184473da8bcd0386132fd99
+    local_path: docs/vertivo/desarrollo-software-blockchain/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=wnyI7ZM_Mrk" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=kxMgYEY-ri0" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=CLntSaAzhiQ" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=qYfJg69St_E" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=S5pfH-PhpNY" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=N6E5RaI3Am4" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=GekSSZmsRXQ" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=L9Pn_G6Jqv8" }
+
+  - id: "13"
+    skill: "Diseño de Sitios Web Low-Code"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/d0fd2a19db4d4ddf9b7307ca943eb669
+    local_path: docs/vertivo/disenio-sitios-web-lowcode/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=U_nzqnXWvSo" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=wnyI7ZM_Mrk" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=kxMgYEY-ri0" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=CLntSaAzhiQ" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=qYfJg69St_E" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=S5pfH-PhpNY" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=N6E5RaI3Am4" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=GekSSZmsRXQ" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=L9Pn_G6Jqv8" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=IdJ52yEUDIo" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=J8rN2GMAcyI" }
+
+  - id: "14"
+    skill: "Diseño UX, UI, de Productos y de Servicios"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/b3e094e758c44ad7971b592da23ef0d8
+    local_path: docs/vertivo/diseno-ux-ui-productos-servicios/
+    children:
+      - { kind: notion_page, title: "Net Promoter Score (NPS) versus Escala Visual Análoga (EVA) del Dolor", notion_url: https://app.notion.com/p/820d13b648db4265ba4ee26025d18d03, local_path: docs/vertivo/diseno-ux-ui-productos-servicios/nps-vs-eva-dolor.md }
+      - { kind: notion_page, title: "Diseño de UX (Experiencias de Usuario)", notion_url: https://app.notion.com/p/316a20d082804a71821074c01e8c9a52, local_path: docs/vertivo/diseno-ux-ui-productos-servicios/diseno-ux.md }
+      - { kind: notion_page, title: "Diseño de UI (Interfaces Gráficas)", notion_url: https://app.notion.com/p/b6fd69d450544866996fa94dcf901eee, local_path: docs/vertivo/diseno-ux-ui-productos-servicios/diseno-ui.md }
+      - { kind: notion_page, title: "Diseño de Productos", notion_url: https://app.notion.com/p/3555a6f01c434b23950d396fc3cc8ff1, local_path: docs/vertivo/diseno-ux-ui-productos-servicios/diseno-productos.md }
+      - { kind: notion_page, title: "Diseño de Servicios", notion_url: https://app.notion.com/p/61cc281f8fe040e18a344d84fc93f947, local_path: docs/vertivo/diseno-ux-ui-productos-servicios/diseno-servicios.md }
+    resources: []
+
+  - id: "15"
+    skill: "Emprendedurismo"
+    type: Blanda Corporativa
+    notion_url: https://app.notion.com/p/f7cce625203b44babd99aa60a1604801
+    local_path: docs/vertivo/emprendedurismo/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=UutXfHp9KDg" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=wnyI7ZM_Mrk" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=kxMgYEY-ri0" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=CLntSaAzhiQ" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=qYfJg69St_E" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=S5pfH-PhpNY" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=N6E5RaI3Am4" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=GekSSZmsRXQ" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=L9Pn_G6Jqv8" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=IdJ52yEUDIo" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=J8rN2GMAcyI" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=he57-FpcGYE" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=qYfJg69St_E" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=ZTU9FaLFYzo" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=99eMk1P0pz4" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=S5pfH-PhpNY" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=N6E5RaI3Am4" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=GekSSZmsRXQ" }
+
+  - id: "16"
+    skill: "Excel Avanzado"
+    type: Dura en Finanzas
+    notion_url: https://app.notion.com/p/aa37629773554521a16d9515b5f54249
+    local_path: docs/vertivo/excel-avanzado/
+    children: []
+    resources: []
+
+  - id: "17"
+    skill: "Fijación de Precios Basados en el Valor Percibido"
+    type: Dura en Finanzas
+    notion_url: https://app.notion.com/p/736779036ef24a2d8e6daecdf21f10a7
+    local_path: docs/vertivo/fijacion-precios-valor-percibido/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=IdJ52yEUDIo" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=J8rN2GMAcyI" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=L9Pn_G6Jqv8" }
+
+  - id: "18"
+    skill: "Finanzas Personales"
+    type: Blanda Personal
+    notion_url: https://app.notion.com/p/cd6e7735ba274e839f38ba3359d15553
+    local_path: docs/vertivo/finanzas-personales/
+    children: []
+    resources: []
+
+  - id: "19"
+    skill: "Gamificación de Contenidos para Micro-Aprendizaje"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/d206a55a09c24f1eb185e04de188a41b
+    local_path: docs/vertivo/gamificacion-contenidos-microaprendizaje/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=he57-FpcGYE" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=qYfJg69St_E" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=S5pfH-PhpNY" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=N6E5RaI3Am4" }
+
+  - id: "20"
+    skill: "Gestión de Cadena de Suministros"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/c7b677af5c6c443a9db04af4cc7fa9bf
+    local_path: docs/vertivo/gestion-cadena-suministros/
+    children:
+      - { kind: notion_page, title: "Procuraduría", notion_url: https://app.notion.com/p/6f3de6c8ecca40159e3098ad0b04702a, local_path: docs/vertivo/gestion-cadena-suministros/procuraduria.md }
+      - { kind: notion_page, title: "Logística y Comercio Internacional", notion_url: https://app.notion.com/p/335a5541f44548ad9719b91b91213db4, local_path: docs/vertivo/gestion-cadena-suministros/logistica-comercio-internacional.md }
+      - { kind: notion_page, title: "Certificaciones Internacionales", notion_url: https://app.notion.com/p/40c412f442a14febb97d200c82582811, local_path: docs/vertivo/gestion-cadena-suministros/certificaciones-internacionales.md }
+      - { kind: notion_page, title: "Manufactura Lean & Six Sigma", notion_url: https://app.notion.com/p/7864da8bca7f4b47b76c882ca4f8a2bb, local_path: docs/vertivo/gestion-cadena-suministros/manufactura-lean-six-sigma.md }
+      - { kind: notion_page, title: "Gestión Cuantitativa de Inventarios", notion_url: https://app.notion.com/p/0ff1e75d603e476a93d09355db1564c6, local_path: docs/vertivo/gestion-cadena-suministros/gestion-cuantitativa-inventarios.md }
+      - { kind: notion_page, title: "Rutas de Transporte", notion_url: https://app.notion.com/p/4faa06598dd048c292204f2cba067c63, local_path: docs/vertivo/gestion-cadena-suministros/rutas-transporte.md }
+    resources:
+      - { kind: pdf, url: "https://publications.iadb.org/publications/spanish/document/Cadena_de_suministro_4.0_Mejores_prácticas_internacionales_y_hoja_de_ruta_para_América_Latina_es.pdf" }
+      - { kind: article, url: "https://www.ssonetwork.com/global-business-services/articles/supply-chain-transformation-an-opportunity-for-gbs" }
+
+  - id: "21"
+    skill: "Gestión de Proyectos Ágiles"
+    type: Blanda Corporativa
+    notion_url: https://app.notion.com/p/1f62b181b9b448e9bfa03fa31ae5eaf1
+    local_path: docs/vertivo/gestion-proyectos-agiles/
+    children:
+      - { kind: notion_page, title: "Scrum", notion_url: https://app.notion.com/p/a86697f74ad242cbaa5fd2b34188926d, local_path: docs/vertivo/gestion-proyectos-agiles/scrum.md }
+      - { kind: notion_page, title: "Kanban", notion_url: https://app.notion.com/p/43cbc9f8f63d4e3dade58d4861aa5a01, local_path: docs/vertivo/gestion-proyectos-agiles/kanban.md }
+      - { kind: notion_page, title: "Management 3.0", notion_url: https://app.notion.com/p/f5030c7aefc04fd6ad4fbee1e2730a80, local_path: docs/vertivo/gestion-proyectos-agiles/management-3-0.md }
+      - { kind: notion_page, title: "ClickUp", notion_url: https://app.notion.com/p/fb0825147aa64cb596f1e9c296f78e62, local_path: docs/vertivo/gestion-proyectos-agiles/clickup.md }
+      - { kind: notion_page, title: "Técnica Pomodoro", notion_url: https://app.notion.com/p/a2ea8e6b748a4336bebf0d88d9f524e8, local_path: docs/vertivo/gestion-proyectos-agiles/tecnica-pomodoro.md }
+    resources: []
+
+  - id: "22"
+    skill: "Gestión de Riesgos Empresariales"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/25608d586a754b3792f34773ee80564a
+    local_path: docs/vertivo/gestion-riesgos-empresariales/
+    children:
+      - { kind: notion_page, title: "Normalización ISO", notion_url: https://app.notion.com/p/5a415f231d2d4f549a22d1d7ebd71beb, local_path: docs/vertivo/gestion-riesgos-empresariales/normalizacion-iso.md }
+      - { kind: notion_page, title: "Evaluación VRIO de Ventajas Competitivas", notion_url: https://app.notion.com/p/60d55c719ebe4ee28fd7791c0bc43e14, local_path: docs/vertivo/gestion-riesgos-empresariales/evaluacion-vrio.md }
+      - { kind: notion_page, title: "Análisis de la Cadena de Valor", notion_url: https://app.notion.com/p/8cc9ab8c46a043449ae9781700673429, local_path: docs/vertivo/gestion-riesgos-empresariales/analisis-cadena-valor.md }
+      - { kind: notion_page, title: "Análisis de las 5 Fuerzas de Porter", notion_url: https://app.notion.com/p/f6f66c1cfa2144ec9c359a24038248c9, local_path: docs/vertivo/gestion-riesgos-empresariales/5-fuerzas-porter.md }
+      - { kind: notion_page, title: "Matriz Crecimiento-Participación (BCG)", notion_url: https://app.notion.com/p/2aaec803a9d64d0883e3ef696a7afd28, local_path: docs/vertivo/gestion-riesgos-empresariales/matriz-bcg.md }
+      - { kind: notion_page, title: "Análisis PESTEL", notion_url: https://app.notion.com/p/169071c301c5407795b67894ee5cca7d, local_path: docs/vertivo/gestion-riesgos-empresariales/analisis-pestel.md }
+      - { kind: notion_page, title: "Mapa de la Cadena de Valor (VSM)", notion_url: https://app.notion.com/p/317c460c9a0b46aa9c7ba05b6a7bb491, local_path: docs/vertivo/gestion-riesgos-empresariales/vsm.md }
+    resources: []
+
+  - id: "23"
+    skill: "Gestión de Talento Humano"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/e28bff016fe441968e6444aa8d74b5f3
+    local_path: docs/vertivo/gestion-talento-humano/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=U_nzqnXWvSo" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=wnyI7ZM_Mrk" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=kxMgYEY-ri0" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=CLntSaAzhiQ" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=qYfJg69St_E" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=S5pfH-PhpNY" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=N6E5RaI3Am4" }
+
+  - id: "24"
+    skill: "Impresión 3D y Manufactura Aditiva"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/1ed4d9926d594ce281dbe9ef8bf34ca5
+    local_path: docs/vertivo/impresion-3d-manufactura-aditiva/
+    children:
+      - { kind: notion_page, title: "Gigabot", notion_url: https://app.notion.com/p/1e738157657f4d06a11f2eaf39335d44, local_path: docs/vertivo/impresion-3d-manufactura-aditiva/gigabot.md }
+    resources:
+      - { kind: article, url: "https://researchleap.com/investigating-the-potential-of-3d-printing-technology-on-spare-parts-business-for-supply-chain-management-in-appliance-industry/" }
+      - { kind: youtube, url: "https://youtu.be/G2myR-6zDfM" }
+      - { kind: youtube, url: "https://youtu.be/3tvETOalUI8" }
+
+  - id: "25"
+    skill: "Ingeniería de Sistemas en la Nube"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/2336a65c0815472f88db66957207db5e
+    local_path: docs/vertivo/ingenieria-sistemas-nube/
+    children:
+      - { kind: notion_page, title: "DevOps", notion_url: https://app.notion.com/p/425c6ff050d6470d9e9b3a792e984da9, local_path: docs/vertivo/ingenieria-sistemas-nube/devops.md }
+      - { kind: notion_page, title: "Site Reliability Engineering", notion_url: https://app.notion.com/p/497d319359be42f7ad553155762d8495, local_path: docs/vertivo/ingenieria-sistemas-nube/sre.md }
+      - { kind: notion_page, title: "Contenedores", notion_url: https://app.notion.com/p/f25b444fb320471abb97a2574b5d1ac9, local_path: docs/vertivo/ingenieria-sistemas-nube/contenedores.md }
+      - { kind: notion_page, title: "Microservicios", notion_url: https://app.notion.com/p/25b201f8b6bb484fbf8862b5cac20bbf, local_path: docs/vertivo/ingenieria-sistemas-nube/microservicios.md }
+      - { kind: notion_page, title: "Serverless", notion_url: https://app.notion.com/p/d4f415a13c3849dfb1dde8f5dff40add, local_path: docs/vertivo/ingenieria-sistemas-nube/serverless.md }
+      - { kind: notion_page, title: "Máquinas Virtuales", notion_url: https://app.notion.com/p/9660f76eb51c4f34bd647036ef688526, local_path: docs/vertivo/ingenieria-sistemas-nube/maquinas-virtuales.md }
+      - { kind: notion_page, title: "Automatización", notion_url: https://app.notion.com/p/1e5e2f56e52d47d39f59879dc54f9e42, local_path: docs/vertivo/ingenieria-sistemas-nube/automatizacion.md }
+      - { kind: notion_page, title: "Cloud Native Foundation Landscape", notion_url: https://app.notion.com/p/d4425de25de841aa956af441b99310a7, local_path: docs/vertivo/ingenieria-sistemas-nube/cncf-landscape.md }
+      - { kind: notion_page, title: "Amazon Web Services", notion_url: https://app.notion.com/p/d7daca26122f4017b9fce5381f6914f2, local_path: docs/vertivo/ingenieria-sistemas-nube/aws.md }
+      - { kind: notion_page, title: "Google Cloud Platform", notion_url: https://app.notion.com/p/ed92440d98a24d139e40d00c7945a3ae, local_path: docs/vertivo/ingenieria-sistemas-nube/gcp.md }
+      - { kind: notion_page, title: "Microsoft Azure", notion_url: https://app.notion.com/p/125193d070ab4d65a23a87707bfb803c, local_path: docs/vertivo/ingenieria-sistemas-nube/azure.md }
+      - { kind: notion_page, title: "IBM Cloud", notion_url: https://app.notion.com/p/b3487e723c45426f906a1e84301cd83d, local_path: docs/vertivo/ingenieria-sistemas-nube/ibm-cloud.md }
+      - { kind: notion_page, title: "Oracle Cloud Infrastructure", notion_url: https://app.notion.com/p/5b81fb155b2347b6b4d041418c5859b9, local_path: docs/vertivo/ingenieria-sistemas-nube/oci.md }
+      - { kind: notion_page, title: "DigitalOcean", notion_url: https://app.notion.com/p/f830c677fa92470297163ed47861f15b, local_path: docs/vertivo/ingenieria-sistemas-nube/digitalocean.md }
+      - { kind: notion_page, title: "Nutanix Cloud Platform", notion_url: https://app.notion.com/p/82cc513e2ba94a0db71cc5160fbca907, local_path: docs/vertivo/ingenieria-sistemas-nube/nutanix.md }
+      - { kind: notion_page, title: "Alibaba Cloud", notion_url: https://app.notion.com/p/9ec00b2b260e4b58ab381ba242b028ca, local_path: docs/vertivo/ingenieria-sistemas-nube/alibaba-cloud.md }
+    resources: []
+
+  - id: "26"
+    skill: "Inteligencia Artificial"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/f1ecaed40af24c808819e2c5dcbe50dd
+    local_path: docs/vertivo/inteligencia-artificial/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=..." }   # 77 URLs externas; el wrapper las extrae
+
+  - id: "27"
+    skill: "Internet de las Cosas"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/61727d89d8c54e9b81a3b6b6e9bc4249
+    local_path: docs/vertivo/internet-de-las-cosas/
+    children:
+      - { kind: notion_page, title: "Fundamentos de Electricidad", notion_url: https://app.notion.com/p/1e6b19c98922457583d6cd6bd154d5de, local_path: docs/vertivo/internet-de-las-cosas/fundamentos-electricidad.md }
+      - { kind: notion_page, title: "Atlas Scientific", notion_url: https://app.notion.com/p/6c20994c2390421881c17c0b94f84f87, local_path: docs/vertivo/internet-de-las-cosas/atlas-scientific.md }
+      - { kind: notion_page, title: "WhiteBox Tentacle T3", notion_url: https://app.notion.com/p/f886912310df47bda893554f490a2ffa, local_path: docs/vertivo/internet-de-las-cosas/whitebox-tentacle-t3.md }
+      - { kind: notion_page, title: "Robot para Semillador Automático", notion_url: https://app.notion.com/p/dd95ff2bb90e419792f31b1e01030883, local_path: docs/vertivo/internet-de-las-cosas/robot-semillador-automatico.md }
+      - { kind: notion_page, title: "Placas de Circuitos (PCBs)", notion_url: https://app.notion.com/p/6dbd5d06bd164442b1b6d19899ad7920, local_path: docs/vertivo/internet-de-las-cosas/pcbs.md }
+      - { kind: notion_page, title: "Impermeabilidad", notion_url: https://app.notion.com/p/93c5fb9389104d1080a457e460ad3694, local_path: docs/vertivo/internet-de-las-cosas/impermeabilidad.md }
+      - { kind: notion_page, title: "Cables y Conectores SMA / BNC", notion_url: https://app.notion.com/p/d5ee5dc8e0ec45e9948444326f7d98f8, local_path: docs/vertivo/internet-de-las-cosas/cables-conectores-sma-bnc.md }
+      - { kind: notion_page, title: "Raspberry Pi", notion_url: https://app.notion.com/p/d1e2f87c95904712838f51ef258f69c9, local_path: docs/vertivo/internet-de-las-cosas/raspberry-pi.md }
+      - { kind: notion_page, title: "ESP32 & ESP8266", notion_url: https://app.notion.com/p/a0adf4e16857401d94bf1091a4e12ca0, local_path: docs/vertivo/internet-de-las-cosas/esp32-esp8266.md }
+      - { kind: notion_page, title: "NVidia Jetson Nano", notion_url: https://app.notion.com/p/aa7f9c5f186044d086c7837d806fab30, local_path: docs/vertivo/internet-de-las-cosas/nvidia-jetson-nano.md }
+      - { kind: notion_page, title: "Google Coral", notion_url: https://app.notion.com/p/ea45bae8a203423fa221d8b54b15a9e2, local_path: docs/vertivo/internet-de-las-cosas/google-coral.md }
+      - { kind: notion_page, title: "Node-Red", notion_url: https://app.notion.com/p/e7d1e4ccf303416aaff93298d5c46abe, local_path: docs/vertivo/internet-de-las-cosas/node-red.md }
+      - { kind: notion_page, title: "MicroPython para ESP32", notion_url: https://app.notion.com/p/fb632b30c98f4edb85c444af0c663fe7, local_path: docs/vertivo/internet-de-las-cosas/micropython-esp32.md }
+      - { kind: notion_page, title: "PlatformIO para Visual Studio Code", notion_url: https://app.notion.com/p/9dacc48ecfb5406197f2a4ddf6e66f00, local_path: docs/vertivo/internet-de-las-cosas/platformio-vscode.md }
+      - { kind: notion_page, title: "Postman", notion_url: https://app.notion.com/p/61b6698784dd4fb7a49ae58e5723cb13, local_path: docs/vertivo/internet-de-las-cosas/postman.md }
+      - { kind: notion_page, title: "CircuitPython", notion_url: https://app.notion.com/p/b75eba4f55d7470a99ebe2c73f756842, local_path: docs/vertivo/internet-de-las-cosas/circuitpython.md }
+      - { kind: notion_page, title: "Análisis de Datos de Sensores", notion_url: https://app.notion.com/p/96c2b003db2248caa5b9139c89b64132, local_path: docs/vertivo/internet-de-las-cosas/analisis-datos-sensores.md }
+      - { kind: notion_page, title: "Siemens MindConnect", notion_url: https://app.notion.com/p/6ce14faf6b0b4285abcdf680d6829eea, local_path: docs/vertivo/internet-de-las-cosas/siemens-mindconnect.md }
+      - { kind: notion_page, title: "Apache Kafka", notion_url: https://app.notion.com/p/d6291671843440df9de9472021089802, local_path: docs/vertivo/internet-de-las-cosas/apache-kafka.md }
+      - { kind: notion_page, title: "Protocolo MQTT", notion_url: https://app.notion.com/p/8fdc86db28f2422e86c7a3c6fd0026b8, local_path: docs/vertivo/internet-de-las-cosas/protocolo-mqtt.md }
+      - { kind: notion_page, title: "Protocolo I2C", notion_url: https://app.notion.com/p/018f7c6a8c4f451084e31a35698d138d, local_path: docs/vertivo/internet-de-las-cosas/protocolo-i2c.md }
+      - { kind: notion_page, title: "Protocolo UART", notion_url: https://app.notion.com/p/681f18bff74840cd8aa77c36da80cc42, local_path: docs/vertivo/internet-de-las-cosas/protocolo-uart.md }
+      - { kind: notion_page, title: "Protocolos LoRa & LoRaWAN", notion_url: https://app.notion.com/p/f2a53464a50b48c4ad75f34d1fa613c1, local_path: docs/vertivo/internet-de-las-cosas/protocolos-lora-lorawan.md }
+      - { kind: notion_page, title: "balenaCloud", notion_url: https://app.notion.com/p/536187f775064e1baec12f83d7e47385, local_path: docs/vertivo/internet-de-las-cosas/balencloud.md }
+      - { kind: notion_page, title: "AWS IoT", notion_url: https://app.notion.com/p/83f8bc22002c4f2687bfc6bff5b4cd33, local_path: docs/vertivo/internet-de-las-cosas/aws-iot.md }
+      - { kind: notion_page, title: "Azure IoT", notion_url: https://app.notion.com/p/8aab278818bd42139b75c9f49622605b, local_path: docs/vertivo/internet-de-las-cosas/azure-iot.md }
+      - { kind: notion_page, title: "Google Cloud PubSub", notion_url: https://app.notion.com/p/d57a650dd43d49d8a06c1a64b02a83a6, local_path: docs/vertivo/internet-de-las-cosas/google-cloud-pubsub.md }
+      - { kind: notion_page, title: "Thingsboard Open Source", notion_url: https://app.notion.com/p/596cc4f0feb64f0182b9cf487ba837d1, local_path: docs/vertivo/internet-de-las-cosas/thingsboard-open-source.md }
+    resources: []
+
+  - id: "28"
+    skill: "Levantando Capital desde Costa Rica"
+    type: Dura en Finanzas
+    notion_url: https://app.notion.com/p/c18e276ba16a4e07855d65708ddb081e
+    local_path: docs/vertivo/levantando-capital-costa-rica/
+    children:
+      - { kind: notion_page, title: "¿Qué buscan los inversionistas ángeles?", notion_url: https://app.notion.com/p/37b7558cdb6b4577b8accc598ec9970b, local_path: docs/vertivo/levantando-capital-costa-rica/que-buscan-inversionistas-angeles.md }
+      - { kind: notion_page, title: "¿Cómo miden los inversionistas la factibilidad?", notion_url: https://app.notion.com/p/43ed22a2e24e4cacbf0a765d46750a18, local_path: docs/vertivo/levantando-capital-costa-rica/como-miden-factibilidad.md }
+      - { kind: notion_page, title: "Podcasts", notion_url: https://app.notion.com/p/8a06a60ef446495f9a058b1b6a4a68ce, local_path: docs/vertivo/levantando-capital-costa-rica/podcasts.md }
+      - { kind: notion_page, title: "Preparación de Pitch Deck para VCs", notion_url: https://app.notion.com/p/1cd31b3a7f63402a94c7d77c38843150, local_path: docs/vertivo/levantando-capital-costa-rica/pitch-deck-vcs.md }
+      - { kind: notion_page, title: "Métodos Alternativos Fundraising", notion_url: https://app.notion.com/p/62b67b5a3947488bbe8cbf17ba2dd5dc, local_path: docs/vertivo/levantando-capital-costa-rica/metodos-alternativos-fundraising.md }
+      - { kind: notion_page, title: "Webinars", notion_url: https://app.notion.com/p/4633c28c10d74f49bf9e67bbc2f1b0dd, local_path: docs/vertivo/levantando-capital-costa-rica/webinars.md }
+      - { kind: notion_page, title: "Aceleradoras en el Extranjero", notion_url: https://app.notion.com/p/3fb9261bcdb94cbcbd2eda0fd9dd26f3, local_path: docs/vertivo/levantando-capital-costa-rica/aceleradoras-extranjero.md }
+      - { kind: notion_page, title: "Inversionistas Ángeles", notion_url: https://app.notion.com/p/607ec8012af9432fbaaff3aa57d49740, local_path: docs/vertivo/levantando-capital-costa-rica/inversionistas-angeles.md }
+    resources:
+      - { kind: article, url: "https://www.studiolegalecoscia.it/commercial-and-corporate-law/financing-a-startup-thanks-to-venture-capitalists/" }
+
+  - id: "29"
+    skill: "Marca Personal"
+    type: Blanda Personal
+    notion_url: https://app.notion.com/p/c59a874f032e456fa877623736dc30a1
+    local_path: docs/vertivo/marca-personal/
+    children: []
+    resources: []
+
+  - id: "30"
+    skill: "Metodología de Investigación"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/fb026d1316e04c24aed05bf8dc6ab12d
+    local_path: docs/vertivo/metodologia-investigacion/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=he57-FpcGYE" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=qYfJg69St_E" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=S5pfH-PhpNY" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=N6E5RaI3Am4" }
+
+  - id: "31"
+    skill: "Modelado 3D para Diseño de Productos y Animación Digital"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/a7ad121dfabb477092d25eed4ecd38d0
+    local_path: docs/vertivo/modelado-3d/
+    children:
+      - { kind: notion_page, title: "Diseño Asistido por Computadora (CAD)", notion_url: https://app.notion.com/p/40b17eb70cb24c73bd834ca2275ac890, local_path: docs/vertivo/modelado-3d/cad.md }
+      - { kind: notion_page, title: "Ingeniería Asistida por Computadora (CAE)", notion_url: https://app.notion.com/p/bb74890f30f54741996107eba5bf1924, local_path: docs/vertivo/modelado-3d/cae.md }
+      - { kind: notion_page, title: "Manufactura Asistida por Computadora (CAM)", notion_url: https://app.notion.com/p/400977f347ac43ed8f2ed64125fcc2fb, local_path: docs/vertivo/modelado-3d/cam.md }
+      - { kind: notion_page, title: "Modelado de Información para la Construcción (BIM)", notion_url: https://app.notion.com/p/a5f5e9e4059f42e0a0040c9f7d5ba164, local_path: docs/vertivo/modelado-3d/bim.md }
+      - { kind: notion_page, title: "Realidad Virtual & Aumentada", notion_url: https://app.notion.com/p/a4cfa84b65ac41d582994a4eeb183520, local_path: docs/vertivo/modelado-3d/vr-ar.md }
+      - { kind: notion_page, title: "Gemelos Digitales para Internet de las Cosas", notion_url: https://app.notion.com/p/30052e9ce5294bc6820afb55081e3946, local_path: docs/vertivo/modelado-3d/gemelos-digitales.md }
+      - { kind: notion_page, title: "Animación Digital", notion_url: https://app.notion.com/p/54bd5332d87b4ee79060305888921f2d, local_path: docs/vertivo/modelado-3d/animacion-digital.md }
+      - { kind: notion_page, title: "Efectos Especiales Visuales (VFX)", notion_url: https://app.notion.com/p/051665af41c441b0b7ce6d4d0071d8ae, local_path: docs/vertivo/modelado-3d/vfx.md }
+      - { kind: notion_page, title: "Frameworks para Desarrollo de Videojuegos", notion_url: https://app.notion.com/p/298390563ed64a18aba0a70a64a51537, local_path: docs/vertivo/modelado-3d/videojuegos.md }
+    resources:
+      - { kind: article, url: "https://www.artstation.com/artwork/14YqAZ", note: "imagen de portada" }
+
+  - id: "32"
+    skill: "Métricas de Impacto"
+    type: Blanda Corporativa
+    notion_url: https://app.notion.com/p/c21c928336e34b82a12a8d981c4b4ae9
+    local_path: docs/vertivo/metricas-impacto/
+    children:
+      - { kind: notion_page, title: "Normalización ISO (mención)", notion_url: https://app.notion.com/p/5a415f231d2d4f549a22d1d7ebd71beb, local_path: null }
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=IdJ52yEUDIo" }
+
+  - id: "33"
+    skill: "Narrativa & Análisis de Datos"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/0d4a900246ce48709172c4896cad1333
+    local_path: docs/vertivo/narrativa-analisis-datos/
+    children:
+      - { kind: notion_page, title: "Narrativa de Datos", notion_url: https://app.notion.com/p/cbcff2b363f24dacb56d830fda4ef3ab, local_path: docs/vertivo/narrativa-analisis-datos/narrativa-de-datos.md }
+      - { kind: notion_page, title: "Herramientas para Análisis de Datos", notion_url: https://app.notion.com/p/e5157152978a4a3bbee117f054fb2bf2, local_path: docs/vertivo/narrativa-analisis-datos/herramientas-analisis-datos.md }
+      - { kind: notion_page, title: "4 pasos para Contar una Buena Historia", notion_url: https://app.notion.com/p/878ca3ea7af14bdba9f550c707a6b46d, local_path: docs/vertivo/narrativa-analisis-datos/4-pasos-buena-historia.md }
+      - { kind: notion_page, title: "Los 7 Arquetipos de Narrativas", notion_url: https://app.notion.com/p/60f53d56367748798d50b26e2f30622e, local_path: docs/vertivo/narrativa-analisis-datos/7-arquetipos-narrativas.md }
+      - { kind: notion_page, title: "Metodología de Investigación (mención)", notion_url: https://app.notion.com/p/fb026d1316e04c24aed05bf8dc6ab12d, local_path: null }
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=lRGyNLymkAQ" }
+
+  - id: "34"
+    skill: "Producción y Post-Producción de Audio y Video"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/219e6e3a52464aef89eaee12860015dd
+    local_path: docs/vertivo/produccion-audio-video/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=UutXfHp9KDg" }
+
+  - id: "35"
+    skill: "Relaciones con Inversionistas"
+    type: Blanda Corporativa
+    notion_url: https://app.notion.com/p/d8fd0b1dbce1493aa3eb12aeda536f4b
+    local_path: docs/vertivo/relaciones-inversionistas/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=IdJ52yEUDIo" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=J8rN2GMAcyI" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=L9Pn_G6Jqv8" }
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=GekSSZmsRXQ" }
+
+  - id: "36"
+    skill: "Resolución de Problemas de Equipos Informáticos"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/329c07157ff24c64ad3cf1eb6095db5c
+    local_path: docs/vertivo/resolucion-problemas-equipos-informaticos/
+    children: []
+    resources: []
+
+  - id: "37"
+    skill: "Soldadura, CNC y Manufactura Reductiva"
+    type: Dura Tecnológica
+    notion_url: https://app.notion.com/p/85f264f8a25c433ca2ad26f04d1f3dee
+    local_path: docs/vertivo/soldadura-cnc-manufactura-reductiva/
+    children: []
+    resources:
+      - { kind: youtube, url: "https://www.youtube.com/watch?v=he57-FpcGYE" }
+
+  - id: "38"
+    skill: "Ventas, Persuación y Negociación"
+    type: Blanda Corporativa
+    notion_url: https://app.notion.com/p/1051b464133a454291567d121e9e2287
+    local_path: docs/vertivo/ventas-persuacion-negociacion/
+    children:
+      - { kind: notion_page, title: "Carisma para Hablar en Público", notion_url: https://app.notion.com/p/2d4000e3380b4c28957f38f3ffb8bc10, local_path: docs/vertivo/ventas-persuacion-negociacion/carisma-hablar-publico.md }
+      - { kind: notion_page, title: "Masterclass de Ventas", notion_url: https://app.notion.com/p/89da76451601483ab397df3c85bfb8d1, local_path: docs/vertivo/ventas-persuacion-negociacion/masterclass-ventas.md }
+      - { kind: notion_page, title: "Resúmenes de Libros", notion_url: https://app.notion.com/p/70cf883095ea4d52ab429aa61cc03aae, local_path: docs/vertivo/ventas-persuacion-negociacion/resumenes-libros.md }
+      - { kind: notion_page, title: "Persuación", notion_url: https://app.notion.com/p/0675178f18f44aca8a36e79f991b3450, local_path: docs/vertivo/ventas-persuacion-negociacion/persuacion.md }
+      - { kind: notion_page, title: "Método Harvard de Negociación", notion_url: https://app.notion.com/p/198ce9db0ea844c3b8241dfcbed1caa3, local_path: docs/vertivo/ventas-persuacion-negociacion/metodo-harvard-negociacion.md }
+      - { kind: notion_page, title: "Estilos de Negociación", notion_url: https://app.notion.com/p/ac01b9541a1c4a87992874ab6892671e, local_path: docs/vertivo/ventas-persuacion-negociacion/estilos-negociacion.md }
+    resources: []
+
+external_summary:
+  youtube: 45+
+  article: 8
+  pdf: 2
+  image: 3
+  notion_page: 15 (menciones cruzadas)
+  bookmark: "~30 (destinos por resolver vía REST API de notion-batch)"
